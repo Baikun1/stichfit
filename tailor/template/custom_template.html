@@ -1,0 +1,28 @@
+{% extends "navfoot.html" %}
+
+{% block title %}
+  stichfit/custom-design
+{% endblock %}
+
+
+{% block content %}
+{% load static %}
+<style>
+    .image-gallery { display: flex; flex-wrap: wrap; gap: 20px; }
+    .image-item { border: 1px solid #ddd; padding: 10px; }
+    img { width: 200px; height: auto; }
+</style>
+
+
+<h1>Fashion Images from Pexels</h1>
+<div class="image-gallery">
+    {% for image in images %}
+        <div class="image-item">
+            <img src="{{ image.src.medium }}" alt="{{ image.alt }}" />
+            <p>Photo by {{ image.photographer }}</p>
+        </div>
+    {% endfor %}
+</div>
+
+
+{% endblock %}

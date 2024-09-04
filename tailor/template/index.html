@@ -9,14 +9,15 @@
 <!-- <link rel="stylesheet" href="{% static 'css/index.css' %}"> -->
     <!-- Banner Section -->
     <section class="banner relative">
-        <img src="{% static 'img/banner-image.jpg' %}" alt="Tailoring Services Banner" class="w-full h-96 object-cover">
-        <div class="banner-content absolute inset-0 flex flex-col justify-center items-center text-white bg-black bg-opacity-50 p-6">
+        
+        <img src="{% static 'img\StichFitBanner.png' %}" alt="Tailoring Services Banner" class="w-full h-96 object-cover">
+        <div class="banner-content absolute inset-0 flex flex-col justify-center items-center text-black p-6">
             <h1 class="text-4xl font-bold mb-4">Welcome to StitchFit</h1>
             <p class="text-lg mb-6">Your One-Stop Solution for Custom Tailoring and Alterations</p>
             <div class="space-x-4">
-                <a href="#" class="cta-button bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Get Started</a>
-                <a href="#" class="cta-button bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600">Book Now</a>
-                <a href="#" class="cta-button bg-indigo-500 text-white py-2 px-4 rounded-md hover:bg-indigo-600">Browse Services</a>
+                <a href="#" class="cta-button bg-black opacity-80 text-white py-2 px-4 rounded-md hover:bg-gray-900">Get Started</a>
+                <a href="#" class="cta-button bg-gray-900 opacity-80 text-white py-2 px-4 rounded-md hover:bg-gray-600">Book Now</a>
+                <a href="#" class="cta-button bg-black opacity-80 text-white py-2 px-4 rounded-md hover:bg-gray-100">Browse Services</a>
             </div>
         </div>
     </section>
@@ -27,15 +28,17 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div class="service bg-white shadow-lg rounded-lg overflow-hidden">
-                <img src="{% static 'img/custom-tailoring.jpg' %}" alt="Custom Tailoring" class="w-full h-48 object-cover">
+                <img src="{% static 'img\CustomTailoring.png' %}" alt="Custom Tailoring" class="w-full h-48 object-cover">
                 <div class="service-content p-6">
+                    <a href="{% url 'service:custom' %}">
                     <h3 class="text-2xl font-semibold mb-2">Custom Tailoring</h3>
+                    </a>
                     <p class="text-gray-700">Perfectly tailored outfits that match your style and measurements.</p>
                 </div>
             </div>
 
             <div class="service bg-white shadow-lg rounded-lg overflow-hidden">
-                <img src="{% static 'img/alterations.jpg' %}" alt="Alterations" class="w-full h-48 object-cover">
+                <img src="{% static 'img\Alternation.png' %}" alt="Alterations" class="w-full h-48 object-cover">
                 <div class="service-content p-6">
                     <h3 class="text-2xl font-semibold mb-2">Alterations</h3>
                     <p class="text-gray-700">Expert alterations to make your clothes fit just right.</p>
@@ -43,7 +46,7 @@
             </div>
 
             <div class="service bg-white shadow-lg rounded-lg overflow-hidden">
-                <img src="{% static 'img/fabric-selection.jpg' %}" alt="Fabric Selection" class="w-full h-48 object-cover">
+                <img src="{% static 'img\FabricSelection.png' %}" alt="Fabric Selection" class="w-full h-48 object-cover">
                 <div class="service-content p-6">
                     <h3 class="text-2xl font-semibold mb-2">Fabric Selection</h3>
                     <p class="text-gray-700">Choose from a wide range of high-quality fabrics.</p>
@@ -51,7 +54,7 @@
             </div>
 
             <div class="service bg-white shadow-lg rounded-lg overflow-hidden">
-                <img src="{% static 'img/design-consultation.jpg' %}" alt="Design Consultation" class="w-full h-48 object-cover">
+                <img src="{% static 'img\DesignConsultation.png' %}" alt="Design Consultation" class="w-full h-48 object-cover">
                 <div class="service-content p-6">
                     <h3 class="text-2xl font-semibold mb-2">Design Consultation</h3>
                     <p class="text-gray-700">Get expert advice to create the perfect design for your outfit.</p>
@@ -61,7 +64,7 @@
     </section>
 
     <!-- Service Previews Section -->
-    <section class="service-previews py-16 bg-gray-100">
+    <!-- <section class="service-previews py-16 bg-gray-100">
         <h2 class="text-3xl font-bold text-center mb-12">Explore Our Services</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -76,10 +79,10 @@
             </div>
             {% endfor %}
         </div>
-    </section>
+    </section> -->
 
     <!-- Testimonials Section -->
-    <section class="testimonials py-16">
+    <!-- <section class="testimonials py-16">
         <h2 class="text-3xl font-bold text-center mb-12">What Our Customers Say</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -93,14 +96,14 @@
             </div>
             {% endfor %}
         </div>
-    </section>
+    </section> -->
 
     <!-- Newsletter Signup Section -->
     <section class="newsletter py-16 bg-gray-100">
         <h2 class="text-3xl font-bold text-center mb-6">Subscribe to Our Newsletter</h2>
         <form action="#" method="POST" class="newsletter-form max-w-lg mx-auto flex flex-col items-center space-y-4">
             <input type="email" name="email" placeholder="Enter your email" required class="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
-            <button type="submit" class="cta-button bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Subscribe</button>
+            <button type="submit" class="cta-button bg-black text-white py-2 px-4 rounded-md hover:bg-slate">Subscribe</button>
         </form>
     </section>
 
