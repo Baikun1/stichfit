@@ -49,7 +49,12 @@ COMPRESS_ROOT = os.path.join(BASE_DIR, 'static')
  
 COMPRESS_ENABLED = True
  
-STATICFILES_FINDERS = ('compressor.finders.CompressorFinder',)
+# STATICFILES_FINDERS = ('compressor.finders.CompressorFinder',)
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'compressor.finders.CompressorFinder',
+]
 
 
 MIDDLEWARE = [
@@ -132,7 +137,17 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_ABOUT=os.path.join(os.path.join(BASE_DIR,'about'),'static')
+STATIC_HOME=os.path.join(os.path.join(BASE_DIR,'home'),'static')
+STATIC_SERVICE=os.path.join(os.path.join(BASE_DIR,'service'),'static')
+STATIC_USER=os.path.join(os.path.join(BASE_DIR,'user'),'static')
+
+
+STATIC_TAILOR=os.path.join(os.path.join(BASE_DIR,'tailor'),'static')
+
+
+STATICFILES_DIRS = [STATIC_ABOUT, STATIC_HOME, STATIC_SERVICE, STATIC_USER, STATIC_TAILOR]
+STATIC_ROOT=os.path.join(BASE_DIR,'static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
