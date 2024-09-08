@@ -50,3 +50,51 @@ def contact(request):
 
 def signin(request):
     return render(request,'signin.html')
+
+
+
+
+def about_us(request):
+    return render(request, 'home/about_us.html')
+
+def careers(request):
+    return render(request, 'home/careers.html')
+
+def press(request):
+    return render(request, 'home/press.html')
+
+def blog(request):
+    return render(request, 'home/blog.html')
+
+def contact(request):
+    return render(request, 'home/contact.html')
+
+def help_center(request):
+    return render(request, 'home/help_center.html')
+
+def privacy_policy(request):
+    return render(request, 'home/privacy_policy.html')
+
+def terms_of_service(request):
+    return render(request, 'home/terms_of_service.html')
+
+def faq(request):
+    return render(request, 'home/faq.html')
+
+def feedback(request):
+    return render(request, 'home/feedback.html')
+
+def documentation(request):
+    return render(request, 'home/documentation.html')
+
+def api_reference(request):
+    return render(request, 'home/api_reference.html')
+
+def guides(request):
+    return render(request, 'home/guides.html')
+
+def community(request):
+    return render(request, 'home/community.html')
+
+def events(request):
+    return render(request, 'home/events.html')

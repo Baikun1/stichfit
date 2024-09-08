@@ -28,12 +28,12 @@ def custom(request):
         images = []  # Fallback to an empty list if the API call fails
 
     # Pass the images to the template
-    return render(request, 'custom_template.html', {'images': images})
+    return render(request, 'service/custom_template.html', {'images': images})
 
 
 def alternation(request):
-    return render(request,'alternation.html')
+    return render(request,'service/alternation.html')
 def favric(request):
-    return render(request,'favricselection.html')
+    return render(request,'service/favricselection.html')
 def consultant(request):
-    return render(request,'consultant.html')
+    return render(request,'service/consultant.html')

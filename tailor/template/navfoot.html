@@ -137,45 +137,42 @@
                 </div>
                 <div class="links2">
                     <h4 class="font-semibold text-lg mb-4">Company</h4>
-                    <a href="#" class="block text-gray-400 hover:text-white mb-2">About Us</a>
-                    <a href="#" class="block text-gray-400 hover:text-white mb-2">Careers</a>
-                    <a href="#" class="block text-gray-400 hover:text-white mb-2">Press</a>
-                    <a href="#" class="block text-gray-400 hover:text-white mb-2">Blog</a>
-                    <a href="#" class="block text-gray-400 hover:text-white">Contact</a>
+                    <a href="{% url 'home:about_us' %}" class="block text-gray-400 hover:text-white mb-2">About Us</a>
+                    <a href="{% url 'home:careers' %}" class="block text-gray-400 hover:text-white mb-2">Careers</a>
+                    <a href="{% url 'home:press' %}" class="block text-gray-400 hover:text-white mb-2">Press</a>
+                    <a href="{% url 'home:blog' %}" class="block text-gray-400 hover:text-white mb-2">Blog</a>
+                    <a href="{% url 'home:contact' %}" class="block text-gray-400 hover:text-white">Contact</a>
                 </div>
                 <div class="links3">
                     <h4 class="font-semibold text-lg mb-4">Support</h4>
-                    <a href="#" class="block text-gray-400 hover:text-white mb-2">Help Center</a>
-                    <a href="#" class="block text-gray-400 hover:text-white mb-2">Privacy Policy</a>
-                    <a href="#" class="block text-gray-400 hover:text-white mb-2">Terms of Service</a>
-                    <a href="#" class="block text-gray-400 hover:text-white mb-2">FAQs</a>
-                    <a href="#" class="block text-gray-400 hover:text-white">Feedback</a>
+                    <a href="{% url 'home:help_center' %}" class="block text-gray-400 hover:text-white mb-2">Help Center</a>
+                    <a href="{% url 'home:privacy_policy' %}" class="block text-gray-400 hover:text-white mb-2">Privacy Policy</a>
+                    <a href="{% url 'home:terms_of_service' %}" class="block text-gray-400 hover:text-white mb-2">Terms of Service</a>
+                    <a href="{% url 'home:faq' %}" class="block text-gray-400 hover:text-white mb-2">FAQs</a>
+                    <a href="{% url 'home:feedback' %}" class="block text-gray-400 hover:text-white">Feedback</a>
                 </div>
                 <div class="links4">
                     <h4 class="font-semibold text-lg mb-4">Resources</h4>
-                    <a href="#" class="block text-gray-400 hover:text-white mb-2">Documentation</a>
-                    <a href="#" class="block text-gray-400 hover:text-white mb-2">API Reference</a>
-                    <a href="#" class="block text-gray-400 hover:text-white mb-2">Guides</a>
-                    <a href="#" class="block text-gray-400 hover:text-white mb-2">Community</a>
-                    <a href="#" class="block text-gray-400 hover:text-white">Events</a>
+                    <a href="{% url 'home:documentation' %}" class="block text-gray-400 hover:text-white mb-2">Documentation</a>
+                    <a href="{% url 'home:api_reference' %}" class="block text-gray-400 hover:text-white mb-2">API Reference</a>
+                    <a href="{% url 'home:guides' %}" class="block text-gray-400 hover:text-white mb-2">Guides</a>
+                    <a href="{% url 'home:community' %}" class="block text-gray-400 hover:text-white mb-2">Community</a>
+                    <a href="{% url 'home:events' %}" class="block text-gray-400 hover:text-white">Events</a>
                 </div>
             </div>
             <hr class="border-gray-700 mb-8">
             <div class="social-icons text-center">
                 <h4 class="font-semibold text-lg mb-4">Follow Us</h4>
                 <div class="flex justify-center space-x-6">
-                    <a href="#" data-platform="facebook" class="text-gray-400 hover:text-white"><i
-                            class="fab fa-facebook-f"></i> Facebook</a>
-                    <a href="#" data-platform="instagram" class="text-gray-400 hover:text-white"><i
-                            class="fab fa-instagram"></i> Instagram</a>
-                    <a href="#" data-platform="github" class="text-gray-400 hover:text-white"><i
-                            class="fab fa-github"></i> GitHub</a>
-                    <a href="#" data-platform="youtube" class="text-gray-400 hover:text-white"><i
-                            class="fab fa-youtube"></i> YouTube</a>
+                    <a href="https://www.facebook.com/baikuntha.behera.50364/" data-platform="facebook" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i> Facebook</a>
+                    <a href="https://www.instagram.com/baikunthabehera5/" data-platform="instagram" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="https://github.com/Baikun1" data-platform="github" class="text-gray-400 hover:text-white"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="#" data-platform="youtube" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i> YouTube</a>
                 </div>
             </div>
         </div>
     </footer>
+    
 
     <!-- <script src="{% static 'js/navfoot.js' %}"></script> -->
 </body>
