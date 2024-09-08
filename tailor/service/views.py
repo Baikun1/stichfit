@@ -14,7 +14,7 @@ def custom(request):
     }
     params = {
         "query": "fashion",  # The search term
-        "per_page": 5        # Number of images to fetch per request
+        "per_page": 15        # Number of images to fetch per request
     }
 
     try:
@@ -29,3 +29,11 @@ def custom(request):
 
     # Pass the images to the template
     return render(request, 'custom_template.html', {'images': images})
+
+
+def alternation(request):
+    return render(request,'alternation.html')
+def favric(request):
+    return render(request,'favricselection.html')
+def consultant(request):
+    return render(request,'consultant.html')
