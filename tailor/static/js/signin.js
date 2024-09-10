@@ -2,7 +2,7 @@ function submitForm() {
     const form = document.getElementById('signInForm');
     const formData = new FormData(form);
 
-    fetch('signin/', {
+    fetch('signin', {
         method: 'POST',
         body: formData,
         headers: {

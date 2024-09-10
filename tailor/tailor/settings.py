@@ -42,6 +42,10 @@ INSTALLED_APPS = [
     'service',
     'user',
     'compressor',
+    'order',
+    'measurement',
+    'fabric',
+
 ]
 
 

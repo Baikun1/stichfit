@@ -11,7 +11,7 @@ stichfit/register
 
 <div class="container mx-auto px-4 py-8">
     <h1 class="text-3xl font-bold text-center mb-6">Sign In</h1>
-    <form id="signInForm" class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg">
+    <form id="signInForm" class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg " method='POST'>
         {% csrf_token %}
         <div class="mb-4">
             <label for="firstName" class="block text-gray-700 text-sm font-bold mb-2">First Name</label>
@@ -49,9 +49,10 @@ stichfit/register
             <label for="zipCode" class="block text-gray-700 text-sm font-bold mb-2">Zip Code</label>
             <input type="text" id="zipCode" name="zip_code" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
         </div>
-        <button type="button" onclick="submitForm()" class="w-full bg-blue-500 text-white p-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:bg-blue-700">Submit</button>
+        <button type="submit"  class="w-full bg-blue-500 text-white p-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:bg-blue-700">Submit</button>
     </form>
 </div>
+<!-- onclick="submitForm()" -->
 
 <!-- <script src="{% static 'js/signin.js' %}"></script> -->
 {% endblock %}
