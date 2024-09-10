@@ -32,10 +32,10 @@
 
             <div class="mid flex items-center space-x-4 hidden lg:flex lg:items-center">
                 <div class="link space-x-4">
-                    <a href="home" class="text-gray-700 hover:text-blue-500">Home</a>
-                    <a href="service" class="text-gray-700 hover:text-blue-500">Service</a>
-                    <a href="about" class="text-gray-700 hover:text-blue-500">About</a>
-                    <a href="contact" class="text-gray-700 hover:text-blue-500">Contact</a>
+                    <a href="{% url 'home:home' %}" class="text-gray-700 hover:text-blue-500">Home</a>
+                    <a href="{% url 'service:home' %}" class="text-gray-700 hover:text-blue-500">Service</a>
+                    <a href="{% url 'about:home' %}" class="text-gray-700 hover:text-blue-500">About</a>
+                    <a href="{% url 'home:contact' %}" class="text-gray-700 hover:text-blue-500">Contact</a>
                 </div>
                 <div class="searchbar flex items-center ml-4">
                     <input type="text" placeholder="serh anything" id="searchInput"
