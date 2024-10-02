@@ -98,3 +98,5 @@ def community(request):
 
 def events(request):
     return render(request, 'home/events.html')
+def underdevelopment(request):
+    return render(request,'underdevelopment.html')

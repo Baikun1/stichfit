@@ -36,5 +36,6 @@ urlpatterns = [
     path('guides/', guides, name='guides'),
     path('community/', community, name='community'),
     path('events/', events, name='events'),
+    path('uc/', underdevelopment, name='uc'),
     
 ]

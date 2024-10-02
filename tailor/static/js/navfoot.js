@@ -38,3 +38,21 @@ function signin() {
     console.log('sign in')
     // Implement your sign in logic here
 }
+
+let hid=true;
+function shownav(){
+    console.log('toogle nav bar clicked !',hid)
+    // let nvtoggle=document.getElementById('nav-toggle');
+    let mobilmenu=document.getElementById('mobilmenu');
+    if (hid){
+        mobilmenu.classList.remove('hidden');
+        hid=false;
+
+    }
+    else{
+        mobilmenu.classList.add('hidden')
+        hid=true;
+
+    };
+
+}
