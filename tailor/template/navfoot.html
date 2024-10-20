@@ -48,12 +48,26 @@
             </div>
 
             <div class="user flex items-center space-x-4 hidden lg:flex">
-                <button id="loginbtn" class="bg-gray-300 text-gray-700 px-4 py-2 rounded hover:bg-gray-600">Login</button>
-                <a href="{% url 'user:signin' %}">
-                    <button class="bg-gray-300 text-black px-4 py-2 rounded hover:bg-gray-600">Sign In</button>
-                </a>
-            
+                {% if user.is_authenticated %}
+                    <!-- Show user profile icon if authenticated -->
+                    <a href="{% url 'user:profile' %}" class="flex items-center space-x-2">
+                        <img src="{% static 'path_to_profile_icon.png' %}" alt="Profile Icon" class="w-8 h-8 rounded-full">
+                        <span class="text-gray-700">{{ user.first_name }}</span>
+                    </a>
+                    <a href="{% url 'user:logout' %}">
+                        <button class="bg-gray-300 text-red-600 px-4 py-2 rounded hover:bg-red-600 hover:text-white">Logout</button>
+                    </a>
+                {% else %}
+                    <!-- Show login and sign-in buttons if not authenticated -->
+                    <a href="{% url 'user:login' %}">
+                        <button class="bg-gray-300 text-gray-700 px-4 py-2 rounded hover:bg-gray-600">Login</button>
+                    </a>
+                    <a href="{% url 'user:signin' %}">
+                        <button class="bg-gray-300 text-black px-4 py-2 rounded hover:bg-gray-600">Sign In</button>
+                    </a>
+                {% endif %}
             </div>
+            
         </div>
 
         <!-- Mobile Menu -->
@@ -90,31 +104,42 @@
                 <span class="close-btn cursor-pointer text-gray-500">&times;</span>
             </div>
             <div class="card-body">
-                <form method="post">
-                    <div class="inputs space-y-4">
-                        <legend>
-                            <table class="w-full">
-                                <tr>
-                                    <td class="py-2"><label for="username" class="block">Username/Mail</label></td>
-                                    <td class="py-2"><input type="text" id="username"
-                                            placeholder="ex: Example123@gmail.com"
-                                            class="w-full border px-3 py-2 rounded"></td>
-                                </tr>
-                                <tr>
-                                    <td class="py-2"><label for="password" class="block">Password</label></td>
-                                    <td class="py-2">
-                                        <div class="password-container flex items-center border rounded px-3 py-2">
-                                            <input type="password" name="password" id="psw" class="w-full outline-none">
-                                            <span class="toggle-password cursor-pointer text-gray-500 ml-2">
-                                                <i class="fas fa-eye"></i>
-                                            </span>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </table>
-                        </legend>
+                <form action="{% url 'user:login' %}" method="post" class="max-w-md mx-auto bg-white shadow-md rounded-lg p-6">
+                    {% csrf_token %}
+                    <h2 class="text-2xl font-bold text-center mb-6">Login</h2>
+                    
+                    <div class="space-y-4">
+                        <!-- Email or Username -->
+                        <div>
+                            <label for="username" class="block text-gray-700">Username/Email</label>
+                            <input type="text" id="username" name="email" placeholder="ex: Example123@gmail.com" 
+                                   class="w-full border border-gray-300 rounded px-3 py-2 mt-1 focus:ring-2 focus:ring-blue-500 focus:border-transparent" required>
+                        </div>
+                
+                        <!-- Password -->
+                        <div>
+                            <label for="password" class="block text-gray-700">Password</label>
+                            <div class="relative">
+                                <input type="password" name="password" id="psw" 
+                                       class="w-full border border-gray-300 rounded px-3 py-2 mt-1 focus:ring-2 focus:ring-blue-500 focus:border-transparent" required>
+                                <span class="absolute right-3 top-3 cursor-pointer text-gray-500 toggle-password">
+                                    <i class="fas fa-eye"></i>
+                                </span>
+                            </div>
+                        </div>
+                
+                        <!-- Submit Button -->
+                        <div>
+                            <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded transition duration-200">
+                                Login
+                            </button>
+                        </div>
+                
+                        <!-- Forgot Password & Register Links -->
+
                     </div>
                 </form>
+                
             </div>
         </div>
     </section>
